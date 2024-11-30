@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import PublicView, CommentView
+from .views import PublicListCreateView, CommentListCreateView, PublicListPutDeleteView, CommentListPutDeleteView
 
 urlpatterns = [
-    path('public/', PublicView.as_view(), name='public'),
-    path('comment/', CommentView.as_view(), name='comment'),
+    path('public_list_create/', PublicListCreateView.as_view(), name='public_list_create'),
+    path('comment_list_create/', CommentListCreateView.as_view(), name='comment_list_create'),
+    path('public_put_delete/', PublicListPutDeleteView.as_view(), name='public_put_delete'),
+    path('comment_put_delete/', CommentListPutDeleteView.as_view(), name='comment_put_delete'),
 ]
